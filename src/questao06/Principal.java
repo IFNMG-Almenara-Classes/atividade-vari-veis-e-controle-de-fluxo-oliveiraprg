@@ -1,4 +1,4 @@
-package questao01;
+package questao06;
 
 import java.util.Scanner;
 
@@ -12,13 +12,19 @@ public class Principal {
         System.out.print("Digite o segundo número: ");
         int segundoNumero = entrada.nextInt();
 
-        if (primeiroNumero > segundoNumero) {
-            System.out.println("O maior número é " + primeiroNumero);
-        } else if (segundoNumero > primeiroNumero) {
-            System.out.println("O maior número é " + segundoNumero);
-        } else {
-            System.out.println("Os dois números são iguais: " + primeiroNumero);
+        System.out.print("Digite o terceiro número: ");
+        int terceiroNumero = entrada.nextInt();
+
+        int menor = primeiroNumero; 
+
+        if (segundoNumero < menor) {
+            menor = segundoNumero;
         }
+        if (terceiroNumero < menor) {
+            menor = terceiroNumero;
+        }
+
+        System.out.println("O menor número é " + menor);
 
         entrada.close();
     }
